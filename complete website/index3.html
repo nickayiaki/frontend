@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Register a New Student</h2>
+
+    <form id="studentForm">
+        <label for="studentName">Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
+
+        <label for="studentAge">Age:</label>
+        <input type="number" id="studentAge" name="studentAge" required>
+
+        <label for="studentGrade">Grade:</label>
+        <input type="text" id="studentGrade" name="studentGrade" required>
+
+        <button type="button" onclick="addStudent()">Add Student</button>
+    </form>
+
+    <script>
+        function addStudent() {
+            var form = document.getElementById("studentForm");
+
+            // Get form values
+            var name = form.elements["studentName"].value;
+            var age = form.elements["studentAge"].value;
+            var grade = form.elements["studentGrade"].value;
+
+            // Validation (you may add more robust validation as needed)
+
+            // Display the entered data (you can modify this part as needed)
+            alert("New Student Added:\nName: " + name + "\nAge: " + age + "\nGrade: " + grade);
+
+            // Clear form inputs
+            form.reset();
+        }
+    </script>
+
+</body>
+</html>
